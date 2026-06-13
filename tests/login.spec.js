@@ -8,3 +8,8 @@ test('successful login with valid credentials', async ({page}) => {
     await expect (page).toHaveURL('https://the-internet.herokuapp.com/secure');
 
 });
+
+test('failed login shows error message',async ({page}) => {
+    
+
+})

@@ -20,3 +20,10 @@ A collection of automated tests (checks that run automatically to verify a websi
 - Playwright — test automation framework
 - JavaScript — the programming language the tests are written in
 - GitHub Actions — CI (Continuous Integration) that runs tests automatically on every push
+
+## Week 2 — Organising tests
+
+- Learned `beforeEach` to remove repeated code across tests
+- Learned `describe` to group related tests together in the report
+- Learned `test.only` and `test.skip` for controlling which tests run
+- Added smoke tags (`@smoke`) to critical tests so they can be run independently

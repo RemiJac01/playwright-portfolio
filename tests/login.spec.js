@@ -6,7 +6,7 @@ test.beforeEach(async ({ page }) => {
   await page.goto('https://the-internet.herokuapp.com/login');
 });
 
-test('successful login with valid credentials', async ({page}) => {
+test('successful login with valid credentials @smoke', async ({page}) => {
     await page.getByLabel("Username").fill('tomsmith');
     await page.getByLabel('Password').fill('SuperSecretPassword!');
     await page.getByRole('button', { name: 'Login'}).click();

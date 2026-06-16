@@ -1,7 +1,10 @@
 import {test, expect} from '@playwright/test'
 
+test.beforeEach(async ({ page }) => {
+  await page.goto('https://the-internet.herokuapp.com/login');
+});
+
 test('successful login with valid credentials', async ({page}) => {
-    await page.goto('https://the-internet.herokuapp.com/login');
     await page.getByLabel("Username").fill('tomsmith');
     await page.getByLabel('Password').fill('SuperSecretPassword!');
     await page.getByRole('button', { name: 'Login'}).click();
@@ -9,8 +12,7 @@ test('successful login with valid credentials', async ({page}) => {
 
 });
 
-test('failed login shows error message',async ({page}) => {
-    await page.goto('https://the-internet.herokuapp.com/login');
+test('failed login shows error message', async ({page}) => {
     await page.getByLabel("Username").fill('tomsmith');
     await page.getByLabel("Password").fill('incorrectpassword');
     await page.getByRole('button', { name: 'Login'}).click();
@@ -18,8 +20,7 @@ test('failed login shows error message',async ({page}) => {
 
 });
 
-test('Successful login then logout',async ({page}) => {
-    await page.goto('https://the-internet.herokuapp.com/login');
+test('Successful login then logout', async ({page}) => {
     await page.getByLabel("Username").fill('tomsmith');
     await page.getByLabel('Password').fill('SuperSecretPassword!');
     await page.getByRole('button', { name: 'Login'}).click();

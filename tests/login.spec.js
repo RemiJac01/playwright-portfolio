@@ -6,6 +6,20 @@ test.describe("Login page", () => {
     await page.goto("https://the-internet.herokuapp.com/login");
   });
 
+  // the table of data - each row produces one test run
+  const invalidCredentials = [
+    {
+      username: "wronguser",
+      password: "SuperSecretPassword!",
+      error: "Your username is invalid!",
+    },
+    {
+      username: "tomsmith",
+      password: "wrongpassword",
+      error: "Your password is invalid!",
+    },
+  ];
+
   test("successful login with valid credentials @smoke", async ({ page }) => {
     // create a new loginPage using the blueprint
     const loginPage = new LoginPage(page);
@@ -14,11 +28,15 @@ test.describe("Login page", () => {
     await expect(page).toHaveURL("https://the-internet.herokuapp.com/secure");
   });
 
-  test("failed login shows error message", async ({ page }) => {
-    const loginPage = new LoginPage(page);
-    await loginPage.login("tomsmith", "Super");
-    await expect(page.getByText("Your password is invalid!")).toBeVisible();
-  });
+  for (const data of invalidCredentials) {
+    test(`failed login with ${data.username} and ${data.password}`, async ({
+      page,
+    }) => {
+      const loginPage = new LoginPage(page);
+      await loginPage.login(data.username, data.password);
+      await expect(page.getByText(data.error)).toBeVisible();
+    });
+  }
 
   test("Successful login then logout", async ({ page }) => {
     const loginPage = new LoginPage(page);

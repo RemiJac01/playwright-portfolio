@@ -1,4 +1,5 @@
-import { test, expect } from "@playwright/test";
+import { test } from "../Fixtures/base.js";
+import { expect } from "@playwright/test";
 import { LoginPage } from "../pages/LoginPage";
 
 test.describe("Login page", () => {
@@ -38,10 +39,10 @@ test.describe("Login page", () => {
     });
   }
 
-  test("Successful login then logout", async ({ page }) => {
-    const loginPage = new LoginPage(page);
-    await loginPage.login("tomsmith", "SuperSecretPassword!");
-    await page.getByRole("link", { name: "Logout" }).click();
-    await expect(page).toHaveURL("https://the-internet.herokuapp.com/login");
+  test("Logged in user can logout", async ({ loggedInPage }) => {
+    await loggedInPage.getByRole("link", { name: "Logout" }).click();
+    await expect(loggedInPage).toHaveURL(
+      "https://the-internet.herokuapp.com/login",
+    );
   });
 }); //end of describe ('Login page')

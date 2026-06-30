@@ -35,3 +35,11 @@ A collection of automated tests (checks that run automatically to verify a websi
 - Refactored login tests to use the POM, removing repeated locators
 - Learned the YAGNI principle (You Aren't Gonna Need It) — only add structure when it's actually needed
 - Replaced a hardcoded test with a `for` loop that dynamically checks every checkbox on the page
+
+## Week 4 — Fixtures
+
+- Learned what a fixture is and how it differs from beforeEach
+- Built a custom `loggedInPage` fixture that logs a user in automatically before a test starts
+- Learned when to use a fixture vs when a test needs to verify the login process itself
+- Refactored the logout test to use the fixture, removing duplicate login steps
+- Renamed a misleading test name to better reflect what it actually verifies

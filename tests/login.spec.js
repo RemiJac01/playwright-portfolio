@@ -18,6 +18,11 @@ test.describe("Login page", () => {
       password: "wrongpassword",
       error: "Your password is invalid!",
     },
+    {
+      username: "",
+      password: "",
+      error: "Your username is invalid!",
+    },
   ];
 
   test("successful login with valid credentials @smoke", async ({ page }) => {

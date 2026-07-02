@@ -1,5 +1,4 @@
-import { test } from "../Fixtures/base.js";
-import { expect } from "@playwright/test";
+import { test, expect } from "../Fixtures/base.js";
 import { LoginPage } from "../pages/LoginPage";
 
 test.describe("Login page", () => {

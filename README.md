@@ -43,3 +43,12 @@ A collection of automated tests (checks that run automatically to verify a websi
 - Learned when to use a fixture vs when a test needs to verify the login process itself
 - Refactored the logout test to use the fixture, removing duplicate login steps
 - Renamed a misleading test name to better reflect what it actually verifies
+
+## Week 5 — Data-driven testing
+
+- Expanded invalid login test data table with SQL (Structured Query Language) injection test cases
+- Learned about security testing and why it matters in real QA work
+- Built a new `download.spec.js` test file from scratch
+- Learned when to separate tests into their own test blocks (one test = one thing verified)
+- Used a `for` loop with an array to check multiple file names are visible on a page
+- Debugged a real-world scenario where a test site changed its content, causing test failures

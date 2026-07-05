@@ -52,3 +52,12 @@ A collection of automated tests (checks that run automatically to verify a websi
 - Learned when to separate tests into their own test blocks (one test = one thing verified)
 - Used a `for` loop with an array to check multiple file names are visible on a page
 - Debugged a real-world scenario where a test site changed its content, causing test failures
+
+## Week 6 — API Testing
+
+- Learned what an API (Application Programming Interface) is and how it differs from UI (User Interface) testing
+- Used Playwright's `request` object to send a GET (retrieve data) request to JSONPlaceholder
+- Asserted the response status code returns 200 (OK)
+- Parsed the JSON (JavaScript Object Notation) response body and asserted specific field values
+- Learned the advantage of API testing — faster, more direct, no browser needed
+- Introduced to the concept of the test pyramid — many API tests, fewer UI tests

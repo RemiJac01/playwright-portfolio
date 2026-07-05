@@ -4,6 +4,35 @@ A collection of automated tests (checks that run automatically to verify a websi
 
 ---
 
+# Project Setup
+
+## 1. Install Homebrew (Mac package manager — required before Node.js)
+
+Run this in your terminal:
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+
+## 2. Install Node.js
+
+`brew install node`
+
+## 3. Clone the repository
+
+`git clone https://github.com/RemiJac01/playwright-portfolio.git`
+
+## 4. Navigate into the project folder
+
+`cd playwright-portfolio`
+
+## 5. Install Playwright
+
+`npm init playwright@latest`
+
+## 6. Run the tests
+
+`npx playwright test`
+
+---
+
 ## Week 1 — Getting started
 
 - Set up Playwright, VS Code and GitHub from scratch

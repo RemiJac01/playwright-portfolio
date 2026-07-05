@@ -5,4 +5,7 @@ test("GET post returns 200 status", async ({ request }) => {
     "https://jsonplaceholder.typicode.com/posts/1",
   );
   await expect(response.status()).toBe(200);
+  const body = await response.json();
+
+  await expect(body.userId).toBe(1);
 });

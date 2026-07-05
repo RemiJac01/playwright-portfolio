@@ -1,11 +1,8 @@
 import { test, expect } from "@playwright/test";
 
 const downloadFiles = [
-  { name: "upload_me.txt" },
-  { name: "README.md" },
-  { name: "test_upload_file.txt" },
-  { name: "some-file.txt" },
-  { name: "test-image.jpg" },
+  { name: "upload-sample.txt" },
+  { name: "sample-upload.txt" },
 ];
 
 test("Download page URL is correct", async ({ page }) => {

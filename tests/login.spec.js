@@ -45,6 +45,7 @@ test.describe("Login page", () => {
     await expect(page).toHaveURL("https://the-internet.herokuapp.com/secure");
   });
 
+  //This for loop loops through each item and tries a different UN,PW and looks for the expected error message
   for (const data of invalidCredentials) {
     test(`failed login with ${data.username} and ${data.password}`, async ({
       page,

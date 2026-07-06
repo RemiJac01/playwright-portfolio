@@ -2,6 +2,19 @@
 
 A collection of automated tests (checks that run automatically to verify a website works) built with Playwright as part of my QA (Quality Assurance) learning journey.
 
+# Project Summary
+
+This project demonstrates:
+
+- Use of the Page Object Model (POM) for maintainable test structure
+- Custom fixtures for a reusable test setup
+- Data-driven testing with the use of for loops and arrays
+- API testing with response validation
+- Cross-browser testing across Chromium, Firefox, and Safari
+- CI (Continuous Integration) via GitHub Actions
+
+I created UI tests for https://the-internet.herokuapp.com/ and API tests for https://jsonplaceholder.typicode.com/posts/1. They are common tests that a QA would use to build a robust test suite. The following areas have been covered Login, checkboxes, downloads and API responses
+
 ---
 
 # Project Setup

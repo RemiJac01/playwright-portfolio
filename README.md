@@ -103,3 +103,11 @@ Run this in your terminal:
 - Parsed the JSON (JavaScript Object Notation) response body and asserted specific field values
 - Learned the advantage of API testing — faster, more direct, no browser needed
 - Introduced to the concept of the test pyramid — many API tests, fewer UI tests
+
+## Week 7 — Portfolio polish
+
+- Added a project setup guide to the README so anyone can clone and run the project
+- Added a project summary highlighting key technical skills demonstrated
+- Added meaningful comments to tests where they add genuine value
+- Learned the principle that good test names often make comments unnecessary
+- Decided to expand the portfolio with a new separate repo for e-commerce testing
